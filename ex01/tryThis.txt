@@ -1,0 +1,36 @@
+
+       Try This
+       --------
+
+In the Test program
+
+  - insert cat then dog
+  - toggle
+  - insert fox
+  - append
+  - show
+  - insert yak
+  - show 
+
+Explain what you see.
+
+Now do the following
+
+   - remove yak
+   - show
+
+Explain what you see.
+
+Now do the following
+   
+   - remove cat
+   - show
+
+Explain again what you see.
+
+
+Patrick
+
+
+
+
