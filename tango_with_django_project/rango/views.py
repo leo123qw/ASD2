@@ -12,6 +12,8 @@ def index(request):
 	context_dict={"categories": category_list,"pages":page_list}
 	return render(request, 'rango/index.html', context=context_dict)
 def about(request):
+	print(request.method)
+	print(request.user)
 	return render(request, 'rango/about.html', {})
 
 def show_category(request, category_name_slug):
@@ -39,7 +41,7 @@ def show_category(request, category_name_slug):
 		context_dict['pages'] = None
     
     # Go render the response and return it to the client.
-	return render(request, 'rango/category.html', context_dict)
+	return render(request,'rango/category.html', context_dict)
 def add_category(request):
 	form =CategoryForm()
 	if request.method=='POST':
