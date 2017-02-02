@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<title>exercise4</title>
-	</head>
-	<body>
-	<h1>this tutorial hass been put together by zhang ji</h1>
-	<img src="H:\django\media\cat.jpg" alt="picture of cat">
-	</body>
-</html>
+{% extends 'rango/base.html' %}
+{load staticfiles %}
+{%block title_block %}
+	{{about.name}}
+{% endblock %}
+
+{% block body_block %}
+	This tutorial has been put together by zhang ji
+	<img src="{{MEDIA_URL}}cat.jpg" alt="picture of cat">
+	<a href="/rango/">Index</a>
+{% endblock %}
+	

@@ -4,6 +4,7 @@ from rango.models import Category
 from rango.models import Page
 from rango.forms import CategoryForm
 from rango.forms import PageForm
+from django.core.urlresolvers import reverse
 def index(request):
 
 	category_list=Category.objects.order_by('-likes')[:5]
@@ -11,7 +12,8 @@ def index(request):
 	context_dict={"categories": category_list,"pages":page_list}
 	return render(request, 'rango/index.html', context=context_dict)
 def about(request):
-	return HttpResponse('Rango says here is the about page <a href="/rango/">Index</a>')
+	return render(request, 'rango/about.html', {})
+
 def show_category(request, category_name_slug):
 	context_dict={}
 	try:
